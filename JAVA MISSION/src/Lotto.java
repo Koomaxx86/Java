@@ -1,4 +1,4 @@
-package _06;
+
 
 
 public class Lotto {
