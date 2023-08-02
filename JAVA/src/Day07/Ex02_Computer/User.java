@@ -15,16 +15,19 @@ public class User {
 		computer.display();
 		computer.typing();
 		computer.turnOff();
+		System.out.println();
 
 		computer2.turnOn();
 		computer2.display();
 		computer2.typing();
 		computer2.turnOff();
+		System.out.println();
 		
 		laptop.turnOn();
 		laptop.display();
 		laptop.typing();
 		laptop.turnOff();
+		System.out.println();
 		
 		gram.turnOn();
 		gram.display();

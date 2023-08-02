@@ -14,12 +14,12 @@ public class Triangle extends Shape {
 	}
 
 	@Override
-	double area() {
+	double area() { // 추상 메소드의 완성
 		//(가로) X (세로) / 2
 		return width * height / 2;
 	}
 
-	@Override
+	@Override // 추상 메소드의 완성
 	double round() {
 		// (정삼각형) : (한변의 길이) * 3
 		return width * 3;

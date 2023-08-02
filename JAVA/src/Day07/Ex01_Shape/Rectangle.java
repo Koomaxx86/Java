@@ -14,13 +14,13 @@ public class Rectangle extends Shape {
 	}
 
 	@Override
-	double area() {
+	double area() { // 추상 메소드의 완성
 		// (가로) X (세로)
 		return width * height;
 	}
 
 	@Override
-	double round() {
+	double round() { // 추상 메소드의 완성
 		// (가로+세로) * 2
 		return (width + height) * 2;
 	}

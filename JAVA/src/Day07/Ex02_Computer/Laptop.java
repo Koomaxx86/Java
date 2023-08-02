@@ -5,9 +5,12 @@ package Day07.Ex02_Computer;
 public abstract class Laptop extends Computer {
 
 	@Override
-	public void display() {
+	public void display() { // 오버라이딩 된 추상메소드
 		System.out.println("Laptop - display");
 	}
+	
+	// Computer의 typing 추상메소드를 완성하지 않아서 
+	// 본 Laptop class 또한 추상 class이다.
 
 	
 	

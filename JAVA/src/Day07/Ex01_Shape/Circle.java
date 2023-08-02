@@ -13,13 +13,13 @@ public class Circle extends Shape {
 	}
 
 	@Override
-	double area() {
+	double area() { // 추상 메소드의 완성
 		// (원주율)*반지름 *반지름
 		return Math.PI * radius * radius;
 	}
 
 	@Override
-	double round() {
+	double round() { // 추상 메소드의 완성
 		// 2*원주율*반지름
 		return 2 * Math.PI * radius;
 	}

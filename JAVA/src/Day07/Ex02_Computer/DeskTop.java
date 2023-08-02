@@ -4,12 +4,12 @@ package Day07.Ex02_Computer;
 public class DeskTop extends Computer {
 
 	@Override
-	public void display() {
+	public void display() { // 오버라이딩 된 추상메소드
 		System.out.println("DeskTop - display");
 	}
 
 	@Override
-	public void typing() {
+	public void typing() { // 오버라이딩 된 추상메소드
 		System.out.println("DeskTop - typing");
 	}
 	
