@@ -20,6 +20,7 @@ public class Board extends Text {
 	}
 	public void setBoardNo(int boardNo) {
 		this.boardNo = boardNo;
+		setNo(boardNo);
 	}
 
 }

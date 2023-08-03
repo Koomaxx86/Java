@@ -22,6 +22,7 @@ public class Television implements RemoteControl {
 		if(volume > RemoteControl.Max_VOLUME) {
 			this.volume = RemoteControl.Max_VOLUME;
 	}
+		
 	// 볼륨을 최소값을 넘지 못하게 지정
 	else if ( volume < RemoteControl.Min_VOLUME) {
 		this.volume = RemoteControl.Min_VOLUME;

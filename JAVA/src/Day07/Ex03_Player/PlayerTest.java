@@ -2,8 +2,9 @@ package Day07.Ex03_Player;
 
 public class PlayerTest {
 public static void main(String[] args) {
-	Player player = new Player();
-	player.play(1);
+	
+	Player player = new Player(); // 플레이어 객체 생성
+	player.play(1); // 생성된 객체의 play 메소드 호출 후 값 1을 넘긴다
 	System.out.println("------------------------");
 	
 	AdvancedLevel level = new AdvancedLevel();

@@ -71,7 +71,7 @@ public class ShapeMaker {
 				continue;
 
 			// instanceof : 인스턴스를 비교하는 연산
-			if(s instanceof Triangle)
+			if(s instanceof Triangle) // instanceof 메소드를 이용해서 형변환이 가능한지 확인
 				System.out.println("[삼각형]");
 			if(s instanceof Rectangle)
 				System.out.println("[사각형]");
@@ -79,7 +79,7 @@ public class ShapeMaker {
 				System.out.println("[원형]");
 			
 			double area = s.area(); // 참조변수 s가 가르키는 객체의 area메소드로 이동. 객체 저장전에는 shape를 가르킨다
-			double round = s.round();
+			double round = s.round(); // shape 클래스에 추상클래는 접근가능
 
 			areaSum = areaSum + area;
 			roundSum = roundSum + round;

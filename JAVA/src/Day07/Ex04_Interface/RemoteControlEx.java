@@ -4,7 +4,7 @@ public class RemoteControlEx {
 	public static void main(String[] args) {
 	
 	// 인터페이스타입 객체명 = new 구현클래스();
-	RemoteControl tvRc = new Television();
+	RemoteControl tvRc = new Television(); // 
 	tvRc.turnOn();
 	tvRc.setVolume(5);
 	tvRc.setVolume(100);
