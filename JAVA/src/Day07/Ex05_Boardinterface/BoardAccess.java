@@ -7,21 +7,22 @@ public class BoardAccess extends JDBConnection implements DataService {
 	// 데이터 목록 조회
 	public Text[] selectList() {
 		
-		int max = Main.max;
-		Board[] boardList = new Board[max];
+		int max = Main.max; // main에 있는 max값(10) 호출 후 int형 max에 저장
+		Board[] boardList = new Board[max]; // Board 타입의 배열 boardLias 생성
 		
 		// SQL
-		String sql = " SELECT * "
-				   + " FROM board ";
+		String sql = " SELECT * " // ??? sql에서 정보 조회?
+				   + " FROM board "; // ??? sql에서 정보 조회?
 		
 		try {
 			stmt = con.createStatement();		// 쿼리 실행 객체 생성
 			rs = stmt.executeQuery(sql);		// 쿼리 실행 - 결과-->rs (ResultSet)
 			
 			int i = 0;
+			
 			// 조회 결과를 배열에 추가
 			while( rs.next() ) {
-				Board board = new Board();
+				Board board = new Board(); // 보드 객체 생성
 				
 				// 결과 데이터 가져오기
 				// rs.getXXX("컬럼명") --> 해당 컬럼의 데이터를 가져온다
@@ -32,8 +33,8 @@ public class BoardAccess extends JDBConnection implements DataService {
 				board.setRegDate( rs.getTimestamp("reg_date") );
 				board.setUpdDate( rs.getTimestamp("upd_date") );
 				
-				if( i >= max ) break;
-				boardList[i++] = board;
+				if( i >= max ) break; // 조회 값이 10개(MAX)값을 넘지 않도록 조정
+				boardList[i++] = board; // 생성 후 값이 입력된 보드 객체를 보드리스트 배열에 순차 입력
 			}
 			
 		} catch (SQLException e) {

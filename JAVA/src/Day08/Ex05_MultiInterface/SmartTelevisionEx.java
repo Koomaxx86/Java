@@ -3,12 +3,12 @@ package Day08.Ex05_MultiInterface;
 public class SmartTelevisionEx {
 	public static void main(String[] args) {
 		
-		SmartTelevision tv = new SmartTelevision();
+		SmartTelevision tv = new SmartTelevision(); // 스마트텔레비전 객체생성
 		
-		tv.turnOn();
-		tv.setVolume(20);
-		int channel = tv.channelSearch("MBC");
-		tv.setChannel(channel);
+		tv.turnOn(); // 오버라이딩된 SmartTelevision의 메소드 호출
+		tv.setVolume(20); // 오버라이딩된 SmartTelevision의 메소드 호출 후 int 값 20 전달
+		int channel = tv.channelSearch("MBC"); // 오버라이딩된 SmartTelevision의 메소드 호출.
+		tv.setChannel(channel); // int형 변수 channel의 값을 전달
 		
 		String[] idolContent = tv.contentSearch("아이돌");
 		System.out.println("========== 검색된 컨텐츠 =========");

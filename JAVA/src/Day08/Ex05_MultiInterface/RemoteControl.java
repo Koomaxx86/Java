@@ -1,6 +1,7 @@
 package Day08.Ex05_MultiInterface;
 
-public interface RemoteControl {
+// 리모컨의 인터페이스
+public interface RemoteControl { 
 
 	// 상수
 	// 인터페이스 변수는 public static final 로 자동으로 선언된다
@@ -15,9 +16,9 @@ public interface RemoteControl {
 	void setChannel(int channel);
 	
 
-	// 디폴트 메소드
+	// 디폴트 메소드. java 8버전 부터 추가된 기능이다. 
 	// : 구현한 객체가 기본으로 사용할 수 있는 메소드
-	default void setMute(boolean mute) {
+	default void setMute(boolean mute) { // boolean 타입을 받아서 메소드에 전달
 		if (mute) {
 			System.out.println("음소거 설정");
 			setVolume(0);

@@ -21,9 +21,8 @@ public class Main {
 	static DataService data2 = new CommentAccess(); // 데이터베이스 접근 개체 (댓글)
 	static Scanner sc = new Scanner(System.in);
 
-	/**
-	 * 메뉴판
-	 */
+	
+	 // 메뉴판
 	public static void menu() {
 		System.out.println("########## 게시판 ##########");
 		System.out.println("1. 게시글 목록");
@@ -39,9 +38,8 @@ public class Main {
 	}
 
 	
-	/**
-	 * 게시글 목록
-	 */
+	
+	 // 게시글 목록
 	public static void list() {
 		System.out.println("##### 게시글 목록 #####");
 		boardList = data.selectList(); 

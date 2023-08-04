@@ -2,37 +2,38 @@ package Day08.Ex05_MultiInterface;
 
 // 다중 구현
 // public class 클래스명 implements 인터페이스A, 인터페이스B ...{ }
+// 스마트 텔레비전 객체를 생성하기위해서 스마트리모컨과 서치 기능을 implements했다.
 public class SmartTelevision implements SmartRemoteControl, Searchable {
 
-	int volume; // 볼륨
-	int channel; // 채널 번호
-	String keyword; // 검색어
+	int volume; // 볼륨 변수 선언
+	int channel; // 채널 변수 선언
+	String keyword; // 키워드 변수 선언
 	int x, y; // 터치패드 좌표
 
 	@Override
-	public void turnOn() {
+	public void turnOn() { // remotecontrol의 추상메소드 오버라이딩 후 완성
 		System.out.println("전원 ON");
 	}
 
 	@Override
-	public void turnOff() {
+	public void turnOff() { // remotecontrol의 추상메소드 오버라이딩 후 완성
 		System.out.println("전원 OFF");
 	}
 
 	@Override
-	public void setVolume(int volume) {
+	public void setVolume(int volume) { // remotecontrol의 추상메소드 오버라이딩 후 완성
 		this.volume = volume;
 		System.out.println("volume : " + volume);
 	}
 
 	@Override
-	public String receiveVoice(String voice) {
+	public String receiveVoice(String voice) { // Microphone의 추상메소드 오버라이딩 후 완성
 		System.out.println("음성 입력 : " + voice);
 		return "voice : " + voice;
 	}
 
 	@Override
-	public int channelSearch(String keyword) {
+	public int channelSearch(String keyword) { // searchable의 추상메소드 오버라이딩 후 완성
 		int channel = 0;
 
 		switch (keyword) {
@@ -52,7 +53,7 @@ public class SmartTelevision implements SmartRemoteControl, Searchable {
 			channel = 11;
 			break;
 		}
-		return channel;
+		return channel; // 전달받은 문자열에 맞는 channel값을 int 타입으로 리턴한다
 	}
 
 	@Override
