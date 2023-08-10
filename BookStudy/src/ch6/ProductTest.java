@@ -5,7 +5,7 @@ class Product {
 	int serialNo; 
 
 	{ // 인스턴스 초기화 블럭
-		++count;
+		++count; // 객체가 생성될 때 마다 1씩증가한다
 		serialNo = count;
 	}
 
