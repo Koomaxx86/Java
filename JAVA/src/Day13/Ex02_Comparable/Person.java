@@ -1,5 +1,6 @@
 package Day13.Ex02_Comparable;
 
+// 인물기본정보
 public class Person implements Comparable<Person>{
 
 	String name;
@@ -36,6 +37,7 @@ public class Person implements Comparable<Person>{
 
 
 	// 컬렉션의 객체에 대한 비교기준을 지정하는 메소드
+	// 리턴값으로 자동정렬된다.
 	@Override
 	public int compareTo(Person o) {
 		// this : 해당 객체
@@ -48,9 +50,9 @@ public class Person implements Comparable<Person>{
 		//	방법 1
 		//	if( thisAge > comAge) {
 		//		// 나이가 큰 사람이 큰 객체다
-		//	
 		//		return 1;
 		//	}
+		
 		//	if( thisAge == comAge) {
 		//		// 나이가 같으면 같은 크기의 객체다
 		//		return 0;
@@ -63,8 +65,8 @@ public class Person implements Comparable<Person>{
 		
 		// 방법2
 		int gap = thisAge - comAge;  // 오름차순
-		int gap2 = comAge - thisAge; // 내림차순
-		return gap2;
+		int gap2 = comAge - thisAge; // 내림차순. 리턴값을 마이나스로 해도 된다.
+		return gap;
 	}
 }
 

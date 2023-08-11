@@ -29,6 +29,7 @@ public class Student implements Comparable<Student>{
 		// * 해당객체 > 비교객체 : 양수
 		// * 해당객체 = 비교객체 : 0
 		// * 해당객체 < 비교객체 : 음수
+		
 		return gap;
 	}
 }
