@@ -15,8 +15,11 @@ import Day14.Board.Service.*;
  */
 public class Main {
 
+	// List 를 implements한 ArrayList 객체를 참조변수명 boardList로 선언. 객체배열
 	static List<Board> boardList = new ArrayList<Board>(); 		// 게시글 목록
+	// List 를 implements한 ArrayList 객체를 참조변수명 commentList로 선언. 객체배열
 	static List<Comment> commentList= new ArrayList<Comment>(); 	// 댓글목록
+	// 스캐너 호출
 	static Scanner sc = new Scanner(System.in);
 	
 	// 비지니스 로직 계층으로 전환 (Service 패키지)
@@ -68,6 +71,7 @@ public class Main {
 			System.out.println("(조회되지 않는 글)");
 			return;
 		}
+		
 		// 객체 정보 불러오기
 		int no = text.getNo();
 		String title = text.getTitle();

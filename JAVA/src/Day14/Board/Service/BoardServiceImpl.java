@@ -7,6 +7,7 @@ import Day14.Board.DTO.Board;
 
 // BoardService의 구현 클래스
 // DAO의 메소드 요청 후 반환된 값을 다시 main으로 반환
+// 인터페이스인 BoardService 를 구현한 클래스
 public class BoardServiceImpl implements BoardService { // BoardService 인터페이스 구현
 	
 	private BoardDAO boardDAO = new BoardDAO();

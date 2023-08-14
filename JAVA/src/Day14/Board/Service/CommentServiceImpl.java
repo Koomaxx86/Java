@@ -5,6 +5,7 @@ import java.util.List;
 import Day14.Board.DAO.CommentDAO;
 import Day14.Board.DTO.Comment;
 
+// 인터페이스인 CommentService를 구현한 클래스
 public class CommentServiceImpl implements CommentService {
 	
 	private CommentDAO commentDAO = new CommentDAO();
