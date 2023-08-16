@@ -2,7 +2,7 @@ package Day08.Ex04_AnonymousObject;
 
 public class AnonymousPerson {
 
-	// 익명 자식 객체 생성
+	// Person 익명 자식 객체 생성
 	Person person = new Person() {
 		
 		void work() {

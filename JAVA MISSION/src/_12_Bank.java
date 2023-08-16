@@ -45,6 +45,7 @@ public class _12_Bank extends _12_Account {
 				break;
 				
 			case 2: 
+				System.out.println("========== 입금 ==========");
 				System.out.print("계좌번호>>");
 				System.out.println();
 				account.setAccountNumber(sc.next());
@@ -63,10 +64,6 @@ public class _12_Bank extends _12_Account {
 				System.out.print("'"+account.getAccountHolder()+"'"+"님의 계좌가 개설되었습니다.");
 				break;
 				
-			case 3: number = "쌀국수"; break;
-			case 4: number = "라면"; break;
-			case 5: number = "돈까스"; break;
-			case 6: number = "버거킹"; break;
 			}
 			
 		} while (number != 6);
