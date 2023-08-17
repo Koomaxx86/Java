@@ -5,6 +5,7 @@ public class _12_Bank extends _12_Account {
 	
 		Scanner sc = new Scanner(System.in);
 		_12_Account[] accountList = new _12_Account[1000];
+		int count = 0;
 		int number;
 
 		
@@ -23,44 +24,39 @@ public class _12_Bank extends _12_Account {
 			number = sc.nextInt(); //번호입력
 
 			switch(number) {
-			case 1: 
-				System.out.print("계좌번호>>");
-				System.out.println();
-				accountList.setAccountNumber(sc.next());
+			case 1:
 				
-				System.out.print("예금주>>");
-				System.out.println();
-				accountList.setAccountHolder(sc.next());
-				
-				System.out.print("최초예금액>>");
-				account.deposit(sc.nextInt());
+				accountList[count] = new _12_Account();
+				System.out.print("계좌번호>> ");
+				accountList[count].setAccountNumber(sc.next());
 				System.out.println();
 				
-				System.out.print("비밀번호>>");
-				account.setPassword(sc.next());
+				System.out.print("예금주>> ");
+				accountList[count].setAccountHolder(sc.next());
 				System.out.println();
-				System.out.print("'"+account.getAccountHolder()+"'"+"님의 계좌가 개설되었습니다.");
+				
+				System.out.print("최초예금액>> ");
+				accountList[count].deposit(sc.nextInt());
+				System.out.println();
+				
+				System.out.print("비밀번호>> ");
+				accountList[count].setPassword(sc.next());
+				System.out.println();
+				System.out.print("'"+accountList[count].getAccountHolder()+"'"+"님의 계좌가 개설되었습니다.");
 				break;
 				
 			case 2: 
 				System.out.println("========== 입금 ==========");
-				System.out.print("계좌번호>>");
-				System.out.println();
-				account.setAccountNumber(sc.next());
-				
-				System.out.print("입금액>>");
-				System.out.println();
-				account.setAccountHolder(sc.next());
-				
-				System.out.print("최초예금액>>");
-				account.deposit(sc.nextInt());
+				System.out.print("계좌번호>> ");
+				String tmpNumber = sc.next();
 				System.out.println();
 				
-				System.out.print("비밀번호>>");
-				account.setPassword(sc.next());
+				System.out.print("입금액>> ");
+				int tmpMoney = sc.nextInt();
 				System.out.println();
-				System.out.print("'"+account.getAccountHolder()+"'"+"님의 계좌가 개설되었습니다.");
-				break;
+				
+				
+			
 				
 			}
 			
