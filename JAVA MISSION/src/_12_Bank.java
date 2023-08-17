@@ -2,14 +2,12 @@ import java.util.Scanner;
 
 public class _12_Bank extends _12_Account {
 	public static void main(String[] args) {
-		
 	
 		Scanner sc = new Scanner(System.in);
-		_12_Account[] accountList;
-		_12_Account account = new _12_Account();
-		
+		_12_Account[] accountList = new _12_Account[1000];
 		int number;
 
+		
 		do {
 
 			System.out.println("=======================");
@@ -28,11 +26,11 @@ public class _12_Bank extends _12_Account {
 			case 1: 
 				System.out.print("계좌번호>>");
 				System.out.println();
-				account.setAccountNumber(sc.next());
+				accountList.setAccountNumber(sc.next());
 				
 				System.out.print("예금주>>");
 				System.out.println();
-				account.setAccountHolder(sc.next());
+				accountList.setAccountHolder(sc.next());
 				
 				System.out.print("최초예금액>>");
 				account.deposit(sc.nextInt());
@@ -50,7 +48,7 @@ public class _12_Bank extends _12_Account {
 				System.out.println();
 				account.setAccountNumber(sc.next());
 				
-				System.out.print("예금주>>");
+				System.out.print("입금액>>");
 				System.out.println();
 				account.setAccountHolder(sc.next());
 				
