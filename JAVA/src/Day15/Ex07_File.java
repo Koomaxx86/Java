@@ -29,7 +29,8 @@ public class Ex07_File {
 	 * @param filePath
 	 */
 	public static void makeDirectory(String filePath) {
-		File file = new File(filePath);		// 파일 객체 생성. 새로운 폴더 생성 전 까지의 경로
+		// File타입의 객체를 생성하면서 생성자에 filePath(파일의 경로값)을 준다
+		File file = new File(filePath);	
 		// 폴더 생성 메소드
 		// mkdir()		: 생성할 경로의 상위 경로까지 기존 디렉토리가 존재해야한다.
 		// mkdirs()		: 생성할 경로의 상위 경로까지 디렉토리를 생성해준다.
@@ -50,13 +51,20 @@ public class Ex07_File {
 	public static File[] listDirectory(String filePath) { 
 		System.out.println(filePath);
 		System.out.println("------------------------------------");
-		File file = new File(filePath);
-		File[] fileList = file.listFiles();	// 하위 경로의 있는 파일목록을 file 배열로 반환
+		File file = new File(filePath); // 필요한 경로를 생성자로 받은 객체를 생성
+		// listFiles 메소드를 통해 하위 경로의 있는 파일목록을 file 배열로 반환
+		File[] fileList = file.listFiles();	
 
-		for (File subFile : fileList) {
-			long update = subFile.lastModified();
+		for (File subFile : fileList) { // foreach를 통해 fileList 배열의 목록을 하나씩 subFile에 저장
+			// lastModified()메소드를 통해 파일의 수정시간을 반환받아서 update에 저장
+			// 1970년도 부터 수정된 시간까지의 ms로 반환하게된다.
+			long update = subFile.lastModified(); 
+			// update에 저장된 ms 값을 날짜와 시간으로 변환하기 위해 Date객체에 생성자로 전달 후 객체로 생성
 			Date date = new Date(update);
+			// 날짜와 시간을 원하는 양식으로 표현하기 위해 SimpleDateFormat 객체 생성 후 원하는 양식 셋팅
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+			// 생성된 SimpleDateFormat 객체에 update값을 가진 date를 인자로 전달하여
+			// 미리 셋팅한 SimpleDateFormat의 날짜 양식으로 출력한다
 			String updateDate = sdf.format(date);
 
 			System.out.println( subFile.getName() + "\t\t");  // 파일명
@@ -73,11 +81,13 @@ public class Ex07_File {
 	 * @param filePath
 	 */
 	public static void fileInfo(String filePath) {
-		File file = new File(filePath);
+		File file = new File(filePath);//파일의 경로를 생성자로 가진 객체 생성
 		System.out.print("파일 종류 : ");
+		// 파일의 종류를 확인하는 메소드를 통해 지정한 경로의 파일이 디렉토리인지 파일인지 확인
 		if( file.isDirectory() ) System.out.println("디렉토리");
 		if( file.isFile() ) System.out.println("일반파일");
 
+		//파일 목록 반환하는 2번 항목과 동일
 		long update = file.lastModified();
 		Date date = new Date(update);
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -97,8 +107,9 @@ public class Ex07_File {
 
 		File file = new File(filePath);
 
-		// 파일 존재여부 확인
+		// exists() 파일이나 디렉토리의 존재여부를 확인하는 메소드.(true/false)
 		if( file.exists()) {
+			
 			// delete()
 			// - 파일 삭제 성공 --> true
 			// - 파일 삭제 실패 --> false

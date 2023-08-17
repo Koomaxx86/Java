@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
-public class _12_Bank extends _12_Account {
+public class Bank extends Account {
 	public static void main(String[] args) {
-	
+
 		Scanner sc = new Scanner(System.in);
-		_12_Account[] accountList = new _12_Account[1000];
+		Account[] accountList = new Account[1000];
 		int count = 0;
 		int number;
 
-		
 		do {
 
 			System.out.println("=======================");
@@ -25,43 +24,49 @@ public class _12_Bank extends _12_Account {
 
 			switch(number) {
 			case 1:
-				
-				accountList[count] = new _12_Account();
+
+				accountList[count] = new Account();
 				System.out.print("계좌번호>> ");
 				accountList[count].setAccountNumber(sc.next());
 				System.out.println();
-				
+
 				System.out.print("예금주>> ");
 				accountList[count].setAccountHolder(sc.next());
 				System.out.println();
-				
+
 				System.out.print("최초예금액>> ");
 				accountList[count].deposit(sc.nextInt());
 				System.out.println();
-				
+
 				System.out.print("비밀번호>> ");
 				accountList[count].setPassword(sc.next());
 				System.out.println();
 				System.out.print("'"+accountList[count].getAccountHolder()+"'"+"님의 계좌가 개설되었습니다.");
 				break;
-				
+
 			case 2: 
 				System.out.println("========== 입금 ==========");
 				System.out.print("계좌번호>> ");
 				String tmpNumber = sc.next();
 				System.out.println();
-				
+
 				System.out.print("입금액>> ");
 				int tmpMoney = sc.nextInt();
 				System.out.println();
-				
-				
-			
-				
-			}
-			
-		} while (number != 6);
-		System.out.println("메뉴판을 종료합니다.");
-		sc.close();
+
+				for (Account i : accountList) {
+					if(i.getAccountNumber().equals(tmpNumber)) {
+						System.out.println("'"+i.getAccountHolder()+"' 님에게 입금하는게 맞으십니까?" );
+					}
+				}
+				System.out.print("1. 예 . 아니오\n입력>>");
+				int num = sc.nextInt();
+				if(num == 1)
+
+
+			} while (number != 6);
+			System.out.println("메뉴판을 종료합니다.");
+			sc.close();
+		}
 	}
 }

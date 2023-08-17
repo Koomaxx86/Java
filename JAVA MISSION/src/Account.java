@@ -1,5 +1,5 @@
 
-public class _12_Account {
+public class Account {
 	
 	String accountNumber;		// 계좌번호
 	String accountHolder;		// 예금주
@@ -23,12 +23,12 @@ public class _12_Account {
 	}
 	
 	// 기본생성자
-	_12_Account() {
+	Account() {
 		this("계좌없음", "이름없음", 0);	
 	}
 	
 	// 매개변수 생성자
-	public _12_Account(String accountNumber, String accountHolder, int Balance) {
+	public Account(String accountNumber, String accountHolder, int Balance) {
 		this.accountNumber = accountNumber;
 		this.accountHolder = accountHolder;
 		this.Balance = Balance;
