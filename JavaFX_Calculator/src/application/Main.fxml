@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="460.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Pane layoutX="11.0" layoutY="51.0" prefHeight="523.0" prefWidth="439.0" styleClass="mainPane" stylesheets="@application.css">
+         <children>
+            <Pane layoutX="12.0" layoutY="9.0" prefHeight="97.0" prefWidth="413.0" styleClass="transparent">
+               <children>
+                  <Label fx:id="labelResult" alignment="CENTER_RIGHT" layoutX="22.0" layoutY="29.0" prefHeight="39.0" prefWidth="369.0" text="0.0" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Console" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn7" layoutX="14.0" layoutY="113.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="7" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn8" layoutX="117.0" layoutY="112.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="37.0" layoutY="28.0" text="8" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn9" layoutX="220.0" layoutY="112.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="9" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnPlus" layoutX="323.0" layoutY="112.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn4" layoutX="15.0" layoutY="215.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="4" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn5" layoutX="118.0" layoutY="214.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="5" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn6" layoutX="221.0" layoutY="214.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="6" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnMinus" layoutX="324.0" layoutY="214.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="38.0" layoutY="28.0" text="-" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn1" layoutX="16.0" layoutY="316.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn2" layoutX="119.0" layoutY="315.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="2" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn3" layoutX="222.0" layoutY="315.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="3" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnMultply" layoutX="325.0" layoutY="315.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="×" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="17.0" layoutY="418.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent" />
+            <Pane fx:id="btn0" layoutX="120.0" layoutY="417.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnEquals" layoutX="223.0" layoutY="417.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="=" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="btnDivide" layoutX="326.0" layoutY="417.0" prefHeight="100.0" prefWidth="100.0" styleClass="transparent">
+               <children>
+                  <Label layoutX="40.0" layoutY="28.0" text="÷" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="29.0" layoutY="13.0" prefHeight="20.0" prefWidth="142.0" text="계산기" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="411.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/close-wh.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="379.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/minus-wh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

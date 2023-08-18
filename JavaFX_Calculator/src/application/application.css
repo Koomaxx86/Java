@@ -1,0 +1,16 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root {
+	-fx-background-color: #222;
+	-fx-background-radius: 30;
+}
+
+.mainPane {
+	-fx-background-color: linear-gradient(to bottom right, rgba(121,114,241,1) 0%, rgba(47,47,177,1) 32%, rgba(0,150,246,1) 70%, rgba(0,141,170,1) 100%);
+	-fx-background-radius: 15 15 25 25;
+}
+
+.transparent {
+	-fx-background-color: rgba(0,0,0,0.2);
+	-fx-background-radius: 20;
+}
