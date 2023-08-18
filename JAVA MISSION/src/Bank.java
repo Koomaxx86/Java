@@ -49,7 +49,11 @@ public class Bank extends Account {
 				System.out.print("계좌번호>> ");
 				String tmpNumber = sc.next();
 				System.out.println();
-
+				
+				for (Account i : accountList) {
+					if(i.getAccountNumber().equals(tmpNumber)) {
+				
+				
 				System.out.print("입금액>> ");
 				int tmpMoney = sc.nextInt();
 				System.out.println();
@@ -57,16 +61,16 @@ public class Bank extends Account {
 				for (Account i : accountList) {
 					if(i.getAccountNumber().equals(tmpNumber)) {
 						System.out.println("'"+i.getAccountHolder()+"' 님에게 입금하는게 맞으십니까?" );
+						System.out.print("1. 예\n2.아니오\n입력>> ");
+						int num = sc.nextInt();
+						if(num == 1) {
+							System.out.println("'"+i.getAccountHolder()+"' 님의 계좌에 "+tmpMoney+"원이 입금되었습니다.");
+						} else {
+							break;
+						}
 					}
 				}
-				System.out.print("1. 예 . 아니오\n입력>>");
-				int num = sc.nextInt();
-				if(num == 1)
-
-
-			} while (number != 6);
-			System.out.println("메뉴판을 종료합니다.");
-			sc.close();
-		}
+			} 
+		} while (number != 6);
 	}
 }
