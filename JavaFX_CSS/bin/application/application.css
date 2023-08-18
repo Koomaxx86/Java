@@ -1,0 +1,29 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root {
+	-fx-background-color: #111111;
+}
+
+.label {
+	-fx-font-size: 30;
+	-fx-font-family: "Consolas";
+	-fx-text-fill: "white";
+	-fx-alignment: center;
+}
+
+.button {
+	-fx-padding: 10 40;
+	-fx-background-color: "cornflowerblue";
+	-fx-text-fill: "white";
+	-fx-alignment: center;
+	-fx-font-size: 24;
+}
+
+.button:hover {
+	-fx-background-color: "royalblue";
+}
+
+
+#titleLabel {
+	-fx-font-size: 60;
+}
