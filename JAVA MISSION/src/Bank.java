@@ -5,8 +5,15 @@ public class Bank extends Account {
 
 		Scanner sc = new Scanner(System.in);
 		Account[] accountList = new Account[1000];
+		Account account = new Account();
 		int count = 0;
 		int number;
+		
+		// 체크용 메소드
+		public  chek(int money) {
+			if(money < account.MIN_TRANSFER || account.MAX_TRANSFER < money)
+				System.out.print("최소 입금액은 1원 이");
+		}
 
 		do {
 
@@ -49,13 +56,10 @@ public class Bank extends Account {
 				System.out.print("계좌번호>> ");
 				String tmpNumber = sc.next();
 				System.out.println();
-				
-				for (Account i : accountList) {
-					if(i.getAccountNumber().equals(tmpNumber)) {
-				
-				
+
 				System.out.print("입금액>> ");
 				int tmpMoney = sc.nextInt();
+				if(tmpMoney < account.MIN_TRANSFER || account.MAX_TRANSFER < tmpMoney) break; 
 				System.out.println();
 
 				for (Account i : accountList) {
@@ -65,11 +69,14 @@ public class Bank extends Account {
 						int num = sc.nextInt();
 						if(num == 1) {
 							System.out.println("'"+i.getAccountHolder()+"' 님의 계좌에 "+tmpMoney+"원이 입금되었습니다.");
+							i.deposit(tmpMoney);
 						} else {
 							break;
 						}
 					}
 				}
+
+			case 3:
 			} 
 		} while (number != 6);
 	}
