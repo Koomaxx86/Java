@@ -30,6 +30,6 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		return isbn + " | " + title + " | " + writer + " | " + content + " | "+ price;
+		return isbn + "\t | " + title + "\t | " + writer + "\t | " + content + "\t | "+ price;
 	}
 }
