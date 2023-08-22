@@ -38,47 +38,23 @@ public class Board {
 	}
 
 	// getter, setter
-	public int getBoardNo() {
-		return boardNo.get();
-	}
-	public void setBoardNo(int boardNo) {
-		this.boardNo = new SimpleIntegerProperty(boardNo);
-	}
+	public int getBoardNo() {return boardNo.get();}
+	public void setBoardNo(int boardNo) {this.boardNo = new SimpleIntegerProperty(boardNo);}
 
-	public String getTitle() {
-		return title.get();
-	}
-	public void setTitle(String title) {
-		this.title = new SimpleStringProperty(title);
-	}
+	public String getTitle() {return title.get();}
+	public void setTitle(String title) {this.title = new SimpleStringProperty(title);}
 
-	public String getWriter() {
-		return writer.get();
-	}
-	public void setWriter(String writer) {
-		this.writer = new SimpleStringProperty(writer);
-	}
+	public String getWriter() {return writer.get();}
+	public void setWriter(String writer) {this.writer = new SimpleStringProperty(writer);}
 
-	public String getContent() {
-		return content.get();
-	}
-	public void setContent(String content) {
-		this.content = new SimpleStringProperty(content);
-	}
+	public String getContent() {return content.get();}
+	public void setContent(String content) {this.content = new SimpleStringProperty(content);}
 
-	public String getRegDate() {
-		return regDate.get();
-	}
-	public void setRegDate(String regDate) {
-		this.regDate = new SimpleStringProperty(regDate);
-	}
+	public String getRegDate() {return regDate.get();}
+	public void setRegDate(String regDate) {this.regDate = new SimpleStringProperty(regDate);}
 
-	public String getUpdDate() {
-		return updDate.get();
-	}
-	public void setUpdDate(String updDate) {
-		this.updDate = new SimpleStringProperty(updDate);
-	}
+	public String getUpdDate() {return updDate.get();}
+	public void setUpdDate(String updDate) {this.updDate = new SimpleStringProperty(updDate);}
 
 	
 	// toString

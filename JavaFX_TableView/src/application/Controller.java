@@ -17,23 +17,19 @@ public class Controller implements Initializable {
 
 	@FXML
 	private TableView<Board> boardTableView;
-
 	@FXML
 	private TableColumn<Board, Integer> colBoardNo;
-
 	@FXML
 	private TableColumn<Board, String> colRegDate;
-
 	@FXML
 	private TableColumn<Board, String> colTitle;
-
 	@FXML
 	private TableColumn<Board, String> colUpdDate;
-
 	@FXML
 	private TableColumn<Board, String> colWriter;
 
 
+	// 게시판 글 내용
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		Board board1 = new Board(1, "제목1", "작성자1", "내용1", "2023-08-18", "2023-08-18");
