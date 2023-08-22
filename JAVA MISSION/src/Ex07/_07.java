@@ -1,3 +1,4 @@
+package Ex07;
 import java.util.Scanner;
 
 public class _07 {

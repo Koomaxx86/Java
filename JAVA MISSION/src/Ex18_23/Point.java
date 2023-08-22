@@ -1,9 +1,9 @@
+package Ex18_23;
 
 public class Point {
+	int x, y;
 
-	int x;
-	int y;
-	
+	// 기본 생성자
 	public Point() {
 		
 	}
@@ -17,5 +17,4 @@ public class Point {
 	public String toString() {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
-	
 }
