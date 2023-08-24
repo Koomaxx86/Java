@@ -7,12 +7,13 @@ import java.util.List;
 import Ex04.DTO.Board;
 import Ex04.DTO.Text;
 
-
+// dataservise를 구현한 boardDAO 클래스
+// DB에 자료를 요청하고 받아온다
 public class BoardDAO extends JDBConnection implements DataService {
 	
 	// 데이터 목록 조회
 	public List<? extends Text> selectList() {
-		
+		// Board타입의 ArrayList 선언
 		List<Board> boardList = new ArrayList<Board>();
 		
 		// SQL
