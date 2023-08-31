@@ -5,14 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Ex04.DTO.Board;
-import Ex04.DTO.Text;
 
-// dataservise를 구현한 boardDAO 클래스
-// DB에 자료를 요청하고 받아온다
 public class BoardDAO extends JDBConnection implements DataService {
 	
-	// 데이터 목록 조회
-	public List<? extends Text> selectList() {
+	public List<Board> selectList() {
 		// Board타입의 ArrayList 선언
 		List<Board> boardList = new ArrayList<Board>();
 		
@@ -28,9 +24,6 @@ public class BoardDAO extends JDBConnection implements DataService {
 			while( rs.next() ) {				// next() : 실행 결과의 다음 데이터로 이동
 				Board board = new Board();
 				
-				// 결과 데이터 가져오기
-				// rs.getXXX("컬럼명") --> 해당 컬럼의 데이터를 가져온다
-				//  - 실행 결과에서, "컬럼명"의 값을 특정 타입으로 반환
 				board.setBoardNo( rs.getInt("board_no") );
 				board.setTitle( rs.getString("title") );
 				board.setWriter( rs.getString("writer") );
@@ -49,7 +42,7 @@ public class BoardDAO extends JDBConnection implements DataService {
 	}
 	
 	// 데이터 조회
-	public Text select(int no) {
+	public Board select(int no) {
 		Board board = new Board();
 		String sql = " SELECT * "
 				   + " FROM board "
@@ -57,13 +50,8 @@ public class BoardDAO extends JDBConnection implements DataService {
 		
 		try {
 			psmt = con.prepareStatement(sql);		// 쿼리 실행 객체 생성 (PrepareStatement)
-			// psmt.setXXX( 순서번호, 매핑할 값 );
 			psmt.setInt(1, no);				// ?(1) <-- boardNo(글번호)
-			// setXXX(순서, 값)		: SQL 의 지정한 순서(?)에 있는 파라미터에 값을 매핑
-			// - 여기서는, "1번 ? 에 글번호 no 값을 매핑한다."
 			rs = psmt.executeQuery();				// 쿼리 실행
-			// executeQuery()
-			// : SQL (SELECT) 을 실행하고 결과를 ResultSet 객체로 반환
 
 			// 조회 결과 가져오기
 			if( rs.next() ) {
@@ -83,7 +71,7 @@ public class BoardDAO extends JDBConnection implements DataService {
 	}
 	
 	// 데이터 등록
-	public int insert(Text text) {
+	public int insert(Board text) {
 		int result = 0;
 		
 		String sql = " INSERT INTO board( title, writer, content ) "
@@ -109,7 +97,7 @@ public class BoardDAO extends JDBConnection implements DataService {
 	}
 	
 	// 데이터 수정
-	public int update(Text text) {
+	public int update(Board text) {
 		
 		int result = 0;
 		
@@ -120,7 +108,6 @@ public class BoardDAO extends JDBConnection implements DataService {
 				   + "   	,upd_date = now() "
 				   + " WHERE board_no = ? "
 				   ;
-		// - now() : 현재 날짜/시간을 반환하는 MySQL 함수
 
 		try {
 			psmt = con.prepareStatement(sql);
@@ -159,7 +146,7 @@ public class BoardDAO extends JDBConnection implements DataService {
 	}
 
 	@Override
-	public List<? extends Text> selectList(int boardNo) {
+	public List<Board> selectList(int boardNo) {
 		return null;
 	}
 	

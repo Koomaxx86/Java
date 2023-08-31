@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="BookStudy/src"/>
+	<classpathentry kind="src" path="codeup/src"/>
+	<classpathentry kind="src" path="JAVA MISSION/src"/>
+	<classpathentry kind="src" path="JAVA/src"/>
+	<classpathentry kind="src" path="JavaFX_Base/src"/>
+	<classpathentry kind="src" path="JavaFX_Calculator/src"/>
+	<classpathentry kind="src" path="JavaFX_Communication/src"/>
+	<classpathentry kind="src" path="JavaFX_CSS/src"/>
+	<classpathentry kind="src" path="JavaFX_Event/src"/>
+	<classpathentry kind="src" path="JavaFX_Exit/src"/>
+	<classpathentry kind="src" path="JavaFX_ListView/src"/>
+	<classpathentry kind="src" path="JavaFX_Scene/src"/>
+	<classpathentry kind="src" path="JavaFX_Stage/src"/>
+	<classpathentry kind="src" path="JavaFX_SwitchScene/src"/>
+	<classpathentry kind="src" path="JavaFX_TableView/src"/>
+	<classpathentry kind="src" path="JavaTest/src"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.web.jar"/>
+	<classpathentry kind="lib" path="JAVA/lib/mysql-connector-j-8.1.0.jar"/>
+	<classpathentry kind="lib" path="JavaTest/bin/Ex04/mysql-connector-j-8.1.0.jar"/>
+	<classpathentry kind="output" path="JAVA/bin"/>
+</classpath>
