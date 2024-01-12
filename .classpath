@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="JAVA/lib/javafx-sdk-20.0.2/lib/javafx.web.jar"/>
 	<classpathentry kind="lib" path="JAVA/lib/mysql-connector-j-8.1.0.jar"/>
 	<classpathentry kind="lib" path="JavaTest/bin/Ex04/mysql-connector-j-8.1.0.jar"/>
+	<classpathentry kind="src" path="BaekJoon/src"/>
 	<classpathentry kind="output" path="JAVA/bin"/>
 </classpath>
